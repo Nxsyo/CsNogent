@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centre de Secours</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/aos.css" />
+    <link rel="stylesheet" href="./assets/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
+    <canvas id="myCanvas" class="myCanvas" width="175" height="100"></canvas>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container flex-lg-column">
+        <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
+          <span class="h3 fw-bold d-block d-lg-none">CS Nogent</span>
+          <img src="./assets/images/logo-img.png" class="img-logo d-none d-lg-block" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav-col navbar-nav ms-auto flex-lg-column text-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#stats">Statistiques</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#engins">Engins</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#personnel">Personnel</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#galerie">Galerie Photo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#devenir-pompier">Devenir Pompier</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+   
+    <!-- //NAVBAR -->
+
+    <!-- CONTENT WRAPPER -->
+    <div id="content-wrapper">
+      <!-- HOME -->
+      <section id="home" class="full-height px-lg-5">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8">
+                <!-- <h1 class="display-4 fw-bold">CENTRE DE SECOURS DE <span class="text-brand">NOGENT-SUR-OISE</span> </h1> -->
+                <h1 class="display-4 fw-bold" data-aos="fade-up">SITE OFFICIEL DES <span class="text-brand">SAPEURS POMPIERS</span> DE NOGENT-SUR-OISE </h1>
+                <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">Situé au nord du bassins creillois, le centre de secours de Nogent-sur-Oise assure la sécurité de plus de 40 000 habitants.</p>
+                <div data-aos="fade-up" data-aos-delay="600">
+                  <a href="https://www.sdis60.fr" class="btn btn-brand me-4">Notre SDIS</a>
+                  <a href="#devenir-pompier" class="link-custom aos-init">Intégrer la caserne</a>   
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </section>
+      <!-- //HOME -->
+
+      <!-- STATISTIQUES -->
+      
+      <section id="stats" class="full-height px-lg-5">
+        <div class="container">
+
+          <div class="row pb-4">
+            <div class="col-lg-8">
+              <h5 data-aos="fade-left" class="text-brand">STATISTIQUES</h5>
+              <h1 data-aos="fade-left">Retrouvez les <span class="text-brand">statistiques</span> du Centre de Secours.</h1>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+
+            <div class="col-md-4" data-aos="fade-left" data-aos-delay="200">
+              <div class="statistiques p-4 bg-base shadow-effect">
+                <div class="iconbox">
+                  <i class="las la-chart-bar"></i>
+                </div>
+                <h1 class="mt-4 mb-2"><span class="count-number" id="count-inter">0</span></h1>
+                <h4>INTERVENTIONS</h4>
+                <p>Le personnel du centre de secours de Nogent-sur-Oise ont effectué plus de 2300 interventions au cours de l'année 2023...</p>
+                <a href="#popup-inter" class="link-inter link-custom">En savoir plus</a>
+                <div id="popup-inter" class="mfp-hide">
+                  <p class="hidedesc text-center">Le personnel du centre de secours de Nogent-sur-Oise ont effectué plus de 2300 interventions au cours de l'année 2023, le cs fait donc partie des caserne les plus mouvementées du departement.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-left" data-aos-delay="400">
+              <div class="statistiques p-4 bg-base shadow-effect">
+                <div class="iconbox">
+                  <i class="las la-user"></i>
+                </div>
+                <h1 class="mt-4 mb-2"><span class="count-number" id="count-sp">0</span></h1>
+                <h4>SAPEURS POMPIERS</h4>
+                <p>L'effectif du centre de secours de Nogent-sur-Oise est de 45 sapeurs pompiers (professionel et volontaire)...</p>
+                <a href="#popup-effectif" class="link-effectif link-custom">En savoir plus</a>
+                <div id="popup-effectif" class="mfp-hide">
+                  <p class="hidedesc text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit aliquet sagittis id consectetur purus ut faucibus. Urna molestie at elementum eu facilisis sed. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Arcu dui vivamus arcu felis bibendum ut. Praesent elementum facilisis leo vel fringilla est. A diam maecenas sed enim ut sem viverra aliquet eget. Eget arcu dictum varius duis at consectetur lorem donec. Congue nisi vitae suscipit tellus mauris.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-left" data-aos-delay="600">
+              <div class="statistiques p-4 bg-base shadow-effect">
+                <div class="iconbox">
+                  <i class="las la-fire"></i>
+                </div>
+                <h1 class="mt-4 mb-2"><span class="count-number" id="count-inc">0</span>%</h1>
+                <h4>INCENDIES</h4>
+                <p>10% des interventions du centre de secours sont liées aux interventions de notre FPT (Fourgon Pompe Tonne)...</p>
+                <a href="#popup-inc" class="link-inc link-custom">En savoir plus</a>
+                <div id="popup-inc" class="mfp-hide">
+                  <p class="hidedesc text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit aliquet sagittis id consectetur purus ut faucibus. Urna molestie at elementum eu facilisis sed. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Arcu dui vivamus arcu felis bibendum ut. Praesent elementum facilisis leo vel fringilla est. A diam maecenas sed enim ut sem viverra aliquet eget. Eget arcu dictum varius duis at consectetur lorem donec. Congue nisi vitae suscipit tellus mauris.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- //STATISTIQUES -->
+
+
+      <!-- ENGIN -->
+
+      <section id="engins" class="full-height px-lg-5">
+
+        <div class="container">
+          <div data-aos="fade-up" data-aos-delay="200" class="row pb-4">
+            <div class="col-lg-8">
+              <h5 class="text-brand">NOS ENGINS</h5>
+              <h1>Les <span class="text-brand">engins </span>qui composent notre caserne.</h1>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+
+            <div data-aos="flip-left" data-aos-delay="200" class="col-lg-3">
+              <div class="card-custom engins-card1 bg-base shadow-effect h-100">
+                <div class="card-custom-image engins-card2 rounded-4">
+                  <img id="vsav-img" class="engins-img" src="">
+                <div class="card-custom-content p-4">
+                  <h4 id="vsav-abr"></h4>
+                  <p id="vsav-fullname"></p>
+                  <a href="#" class="link-custom">En savoir plus</a>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <div data-aos="flip-left" data-aos-delay="400" class="col-lg-3">
+              <div class="card-custom engins-card1 bg-base shadow-effect h-100">
+                <div class="card-custom-image engins-card2 rounded-4">
+                  <img id="fpt-img" class="engins-img" src="">
+                <div class="card-custom-content p-4">
+                  <h4>FPT</h4>
+                  <p>Fourgon pompe tonne.</p>
+                  <a href="#" class="link-custom">En savoir plus</a>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <div data-aos="flip-left" data-aos-delay="600" class="col-lg-3">
+              <div class="card-custom engins-card1 bg-base shadow-effect h-100">
+                <div class="card-custom-image engins-card2 rounded-4">
+                  <img id="vtu-img" class="engins-img" src="">
+                <div class="card-custom-content p-4">
+                  <h4>VTU PA</h4>
+                  <p>Véhicule toute utilitée protéction et abordage.</p>
+                  <a href="#" class="link-custom">En savoir plus</a>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <div data-aos="flip-left" data-aos-delay="800" class="col-lg-3">
+              <div class="card-custom engins-card1 bg-base shadow-effect h-100">
+                <div class="card-custom-image engins-card2 rounded-4">
+                  <img id="ctul-img" class="engins-img" src="">
+                <div class="card-custom-content p-4">
+                  <h4>CTUL</h4>
+                  <p>Camionette toute utilitée</p>
+                  <a href="#" class="link-custom">En savoir plus</a>
+                </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- //ENGIN -->
+
+
+      <!-- PERSONNEL -->
+
+      <!-- <section id="personnel" class="full-height px-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 pb-5">
+                    <h5 class="text-brand">LE PERSONNEL</h5>
+                    <h1>Le <span class="text-brand">personnel</span> qui compose notre caserne.</h1>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center">
+                <h5 class="grade-text mb-4">Les <span class="text-brand">officiers :</span> </h5>
+              </div>
+                
+                  <div class="row justify-content-center">
+                    <div class="col-lg-2 col-md-4 col-9 mx-5 mb-5 mt-4">
+                        <div class="personnel-custom bg-base2 ">
+                            <div class="personnel-custom-content">
+                                <img class="personnel-img" src="./assets/images/templates pp.jpg">
+                                <div class="p-3 text-center">
+                                    <p style="margin-bottom: 0rem;">Lieutenant Christophe Vaillant</p>
+                                </div>
+                                <div class="overlay">
+                                    <p class="text-center m-4">Chef du centre de secours de Nogent-sur-Oise</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+            <div class="row justify-content-center">
+              <h5 class="grade-text mb-4">Les <span class="text-brand">sous officiers :</span></h5>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-2 col-md-4 col-9 mx-5 mb-5 mt-4">
+                  <div class="personnel-custom bg-base2 ">
+                      <div class="personnel-custom-content">
+                          <img class="personnel-img" src="./assets/images/templates pp.jpg">
+                          <div class="p-3 text-center">
+                              <p style="margin-bottom: 0rem;">Adjudant Chef Gerard Dambreville</p>
+                          </div>
+                          <div class="overlay">
+                              <p class="text-center m-4">Adjoint au chef de centre</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+          <div class="row justify-content-center">
+            <h5 class="grade-text mb-4">Les <span class="text-brand">hommes du rang :</span></h5>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-2 col-md-4 col-9 mx-5 mb-5 mt-4">
+                <div class="personnel-custom bg-base2 ">
+                    <div class="personnel-custom-content">
+                        <img class="personnel-img" src="./assets/images/templates pp.jpg">
+                        <div class="p-3 text-center">
+                            <p style="margin-bottom: 0rem;">Sapeur Yannis Boussada</p>
+                        </div>
+                        <div class="overlay">
+                            <p class="text-center m-4">Le plus beau</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          </div> -->
+    
+      <!-- //PERSONNEL -->
+
+      <!-- GALERIE PHOTO -->
+
+
+      <!-- //GALERIE PHOTO -->
+
+
+      <!-- CONTACT -->
+
+      <section id="devenir-pompier" class="full-height px-lg-5">
+        <div class="container">
+
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-8 pb-5">
+              <h5 class="text-brand pb-2">NOUS CONTACTER</h5>
+              <h1>Envie <span class="text-brand">d'intégrer la caserne</span>, envoie nous un message !
+              </h1>
+          </div>
+
+            <div class="col-lg-8">
+              <form action="#" class="row g-lg-3 gy-3">
+
+                <div class="form-group col-md-6">
+                  <input type="text" id="name" class="form-control" placeholder="Nom">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" id="first-name" class="form-control" placeholder="Prénom">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="email" id="mail" class="form-control" placeholder="Adresse Mail">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="tel" id="phone" class="form-control" placeholder="Téléphone">
+                </div>
+                <div class="form-group col-12">
+                  <input type="text" id="subject" class="form-control" placeholder="Sujet">
+                </div>
+                <div class="form-group col-12">
+                  <textarea name="" rows="5" id="message" class="form-control" placeholder="Entrez votre message"></textarea>
+                </div>
+                <div class="form-group col-12 d-grid">
+                  <button type="submit" id="sendButton" class="btn btn-brand">Envoyez</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <!-- //CONTACT -->
+
+    </div>
+    <!-- //CONTENT WRAPPER -->
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+
+        $.ajax({
+          url: "http://195.154.118.169/sofyan/pompier/start.php?c=engin&t=engindata",
+          context: document.body
+            }).done(function(data) {
+              $("#vsav-img").attr('src',"data:image/png;base64,"+JSON.parse(data)[2]);
+              $("#fpt-img").attr('src',"data:image/png;base64,"+JSON.parse(data)[5]);
+              $("#vtu-img").attr('src',"data:image/png;base64,"+JSON.parse(data)[8]);
+              $("#ctul-img").attr('src',"data:image/png;base64,"+JSON.parse(data)[11]);
+              $("#vsav-abr").html(JSON.parse(data)[1]);
+              $("#vsav-fullname").html(JSON.parse(data)[0]);
+
+              
+            });
+          
+        $(document).ready(function() {
+          $('.link-inter').magnificPopup({
+            removalDelay: 300,
+            mainClass: 'mfp-fade'
+          });
+        });
+
+        $(document).ready(function() {
+          $('.link-effectif').magnificPopup({
+            removalDelay: 300,
+            mainClass: 'mfp-fade'
+          });
+        });
+
+        $(document).ready(function() {
+          $('.link-inc').magnificPopup({
+            removalDelay: 300,
+            mainClass: 'mfp-fade'
+          });
+        });
+
+          setTimeout(() => {
+            const c = new countUp.CountUp("count-inter", 2300, { duration: 3 });
+            c.start();
+          }, 300);
+
+          setTimeout(() => {
+            const c1 = new countUp.CountUp("count-sp", 45, { duration: 4 });
+            c1.start();
+          }, 500);
+
+          setTimeout(() => {
+            const c2 = new countUp.CountUp("count-inc", 10, { duration: 4 });
+            c2.start();
+          }, 700);
+
+        // document.getElementById("sendButton").addEventListener("click", function() {
+        //   var name = document.getElementById('name').value;
+        //   var firstName = document.getElementById('first-name').value;
+        //   var email = document.getElementById('mail').value;
+        //   var phone = document.getElementById('phone').value;
+        //   var subject = document.getElementById('subject').value;
+        //   var message = document.getElementById('message').value;
+
+        //   let body = "Nom: " + name + "<br/> Prénom: " + firstName + "<br/> Email: " + email + "<br/> Téléphone: " + phone + "<br/> Sujet: " + subject + "<br/> Message: " + message; 
+        //   console.log(body);
+
+
+        //   Email.send({
+        //     SecureToken : "3012aa13-cb17-410f-aa7a-4838098b1cda",
+        //     To : 'pragioz60@gmail.com',
+        //     From : 'pragioz60@gmail.com',
+        //     Subject : subject,
+        //     Body : body
+        //   }).then(
+        //     message => alert(message)
+        //   );
+        // })
+
+    </script>
+
+  </body>
+</html>
