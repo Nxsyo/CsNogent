@@ -217,6 +217,35 @@
 
       <!-- //ENGIN -->
 
+      <!-- GALERIE -->
+
+      <section id="galerie" class="full-height px-lg-5">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/images/cs.jpg" class="img-galerie d-block w-100 img-fluid" style="object-fit: cover; height: 750px;" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>CS Nogent-sur-Oise</h5>
+                <p>Voici le centre de secours de Nogent-sur-Oise</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      
+      
+      
+
+      <!-- //GALERIE -->
+
 
       <!-- PERSONNEL -->
 
@@ -355,6 +384,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/jquery.magnific-popup.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./assets/js/vehicule.js"></script>
 
     <script>
 
@@ -368,9 +398,30 @@
               $("#ctul-img").attr('src',"data:image/png;base64,"+JSON.parse(data)[11]);
               $("#vsav-abr").html(JSON.parse(data)[1]);
               $("#vsav-fullname").html(JSON.parse(data)[0]);
-
-              
             });
+        
+            $.ajax({
+              url: "http://195.154.118.169/sofyan/pompier/start.php?c=galerie&t=galeriedata",
+              context: document.body
+                }).done(function(data) {
+                  var galerieData = JSON.parse(data);
+                  galerieData.forEach(function(galerie) {
+                    var nouvelElement = `
+                      <div class="carousel-item">
+                          <img src="data:image/png;base64,${galerie.photoLink}" class="img-galerie d-block w-100 img-fluid" style="object-fit: cover; height: 750px;" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                              <h5>${galerie.titre}</h5>
+                              <p>${galerie.description}</p>
+                          </div>
+                      </div>`;
+                  $(".carousel-inner").append(nouvelElement);
+              });
+});
+
+
+        
+
+
           
         $(document).ready(function() {
           $('.link-inter').magnificPopup({

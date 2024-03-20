@@ -314,3 +314,21 @@ img {
 canvas {
   border: 1px solid black;
 }
+
+.galerie-div {
+  margin: 50px;
+
+}
+
+@media (max-width: 767px) {
+  .img-galerie {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 444px) {
+  .img-galerie {
+    max-height: 200px;
+  }
+}
+
