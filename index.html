@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./assets/css/aos.css" />
     <link rel="stylesheet" href="./assets/css/line-awesome.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/magnific-popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -65,7 +64,7 @@
               <div class="col-lg-8">
                 <!-- <h1 class="display-4 fw-bold">CENTRE DE SECOURS DE <span class="text-brand">NOGENT-SUR-OISE</span> </h1> -->
                 <h1 class="display-4 fw-bold" data-aos="fade-up">SITE OFFICIEL DES <span class="text-brand">SAPEURS POMPIERS</span> DE NOGENT-SUR-OISE </h1>
-                <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">Situé au nord du bassins creillois, le centre de secours de Nogent-sur-Oise assure la sécurité de plus de 40 000 habitants.</p>
+                <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">Situé au nord du bassins creillois, le centre de secours de Nogent-sur-Oise assure la sécurité de plus de 30 000 habitants.</p>
                 <div data-aos="fade-up" data-aos-delay="600">
                   <a href="https://www.sdis60.fr" class="btn btn-brand me-4">Notre SDIS</a>
                   <a href="#devenir-pompier" class="link-custom aos-init">Intégrer la caserne</a>   
@@ -99,9 +98,19 @@
                 <h1 class="mt-4 mb-2"><span class="count-number" id="count-inter">0</span></h1>
                 <h4>INTERVENTIONS</h4>
                 <p>Le personnel du centre de secours de Nogent-sur-Oise ont effectué plus de 2300 interventions au cours de l'année 2023...</p>
-                <a href="#popup-inter" class="link-inter link-custom">En savoir plus</a>
-                <div id="popup-inter" class="mfp-hide">
-                  <p class="hidedesc text-center">Le personnel du centre de secours de Nogent-sur-Oise ont effectué plus de 2300 interventions au cours de l'année 2023, le cs fait donc partie des caserne les plus mouvementées du departement.</p>
+                <a  class="link-inter link-custom" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">En savoir plus</a>
+              </div>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-modal">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Interventions</h1>
+                    <button type="button" class="btn-close text-brand" data-bs-dismiss="modal" aria-label="Close" ></button>
+                  </div>
+                  <div class="modal-body">
+                    Le personnel du centre de secours de Nogent-sur-Oise ont effectué plus de 2300 interventions au cours de l'année 2023.
+                  </div>
                 </div>
               </div>
             </div>
@@ -115,9 +124,6 @@
                 <h4>SAPEURS POMPIERS</h4>
                 <p>L'effectif du centre de secours de Nogent-sur-Oise est de 45 sapeurs pompiers (professionel et volontaire)...</p>
                 <a href="#popup-effectif" class="link-effectif link-custom">En savoir plus</a>
-                <div id="popup-effectif" class="mfp-hide">
-                  <p class="hidedesc text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit aliquet sagittis id consectetur purus ut faucibus. Urna molestie at elementum eu facilisis sed. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Arcu dui vivamus arcu felis bibendum ut. Praesent elementum facilisis leo vel fringilla est. A diam maecenas sed enim ut sem viverra aliquet eget. Eget arcu dictum varius duis at consectetur lorem donec. Congue nisi vitae suscipit tellus mauris.</p>
-                </div>
               </div>
             </div>
 
@@ -130,9 +136,6 @@
                 <h4>INCENDIES</h4>
                 <p>10% des interventions du centre de secours sont liées aux interventions de notre FPT (Fourgon Pompe Tonne)...</p>
                 <a href="#popup-inc" class="link-inc link-custom">En savoir plus</a>
-                <div id="popup-inc" class="mfp-hide">
-                  <p class="hidedesc text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit aliquet sagittis id consectetur purus ut faucibus. Urna molestie at elementum eu facilisis sed. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Arcu dui vivamus arcu felis bibendum ut. Praesent elementum facilisis leo vel fringilla est. A diam maecenas sed enim ut sem viverra aliquet eget. Eget arcu dictum varius duis at consectetur lorem donec. Congue nisi vitae suscipit tellus mauris.</p>
-                </div>
               </div>
             </div>
 
@@ -155,59 +158,8 @@
             </div>
           </div>
 
-          <div class="row gy-4">
+          <div class="row gy-4 engin-container">
 
-            <div data-aos="flip-left" data-aos-delay="200" class="col-lg-3">
-              <div class="card-custom engins-card1 bg-base shadow-effect h-100">
-                <div class="card-custom-image engins-card2 rounded-4">
-                  <img id="vsav-img" class="engins-img" src="">
-                <div class="card-custom-content p-4">
-                  <h4 id="vsav-abr"></h4>
-                  <p id="vsav-fullname"></p>
-                  <a href="#" class="link-custom">En savoir plus</a>
-                </div>
-                </div>
-              </div>
-            </div>
-
-            <div data-aos="flip-left" data-aos-delay="400" class="col-lg-3">
-              <div class="card-custom engins-card1 bg-base shadow-effect h-100">
-                <div class="card-custom-image engins-card2 rounded-4">
-                  <img id="fpt-img" class="engins-img" src="">
-                <div class="card-custom-content p-4">
-                  <h4>FPT</h4>
-                  <p>Fourgon pompe tonne.</p>
-                  <a href="#" class="link-custom">En savoir plus</a>
-                </div>
-                </div>
-              </div>
-            </div>
-
-            <div data-aos="flip-left" data-aos-delay="600" class="col-lg-3">
-              <div class="card-custom engins-card1 bg-base shadow-effect h-100">
-                <div class="card-custom-image engins-card2 rounded-4">
-                  <img id="vtu-img" class="engins-img" src="">
-                <div class="card-custom-content p-4">
-                  <h4>VTU PA</h4>
-                  <p>Véhicule toute utilitée protéction et abordage.</p>
-                  <a href="#" class="link-custom">En savoir plus</a>
-                </div>
-                </div>
-              </div>
-            </div>
-
-            <div data-aos="flip-left" data-aos-delay="800" class="col-lg-3">
-              <div class="card-custom engins-card1 bg-base shadow-effect h-100">
-                <div class="card-custom-image engins-card2 rounded-4">
-                  <img id="ctul-img" class="engins-img" src="">
-                <div class="card-custom-content p-4">
-                  <h4>CTUL</h4>
-                  <p>Camionette toute utilitée</p>
-                  <a href="#" class="link-custom">En savoir plus</a>
-                </div>
-                </div>
-              </div>
-            </div>
 
           </div>
 
@@ -220,10 +172,18 @@
       <!-- GALERIE -->
 
       <section id="galerie" class="full-height px-lg-5">
+        <div class="container">
+          <div data-aos="fade-up" data-aos-delay="200" class="row pb-4">
+            <div class="col-lg-8">
+              <h5 class="text-brand">GALERIE PHOTO</h5>
+              <h1>Une <span class="text-brand">galerie photo </span> liée à notre caserne.</h1>
+            </div>
+          </div>
+
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./assets/images/cs.jpg" class="img-galerie d-block w-100 img-fluid" style="object-fit: cover; height: 750px;" alt="...">
+              <img src="./assets/images/cs.jpg" class="img-galerie d-block w-100 img-fluid" style="object-fit: cover; height: 550px;" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>CS Nogent-sur-Oise</h5>
                 <p>Voici le centre de secours de Nogent-sur-Oise</p>
@@ -320,11 +280,6 @@
     
       <!-- //PERSONNEL -->
 
-      <!-- GALERIE PHOTO -->
-
-
-      <!-- //GALERIE PHOTO -->
-
 
       <!-- CONTACT -->
 
@@ -382,67 +337,10 @@
     <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="./assets/js/vehicule.js"></script>
+    <script src="./assets/js/linkdata.js"></script>
 
     <script>
-
-        $.ajax({
-          url: "http://195.154.118.169/sofyan/pompier/start.php?c=engin&t=engindata",
-          context: document.body
-            }).done(function(data) {
-              $("#vsav-img").attr('src',"data:image/png;base64,"+JSON.parse(data)[2]);
-              $("#fpt-img").attr('src',"data:image/png;base64,"+JSON.parse(data)[5]);
-              $("#vtu-img").attr('src',"data:image/png;base64,"+JSON.parse(data)[8]);
-              $("#ctul-img").attr('src',"data:image/png;base64,"+JSON.parse(data)[11]);
-              $("#vsav-abr").html(JSON.parse(data)[1]);
-              $("#vsav-fullname").html(JSON.parse(data)[0]);
-            });
-        
-            $.ajax({
-              url: "http://195.154.118.169/sofyan/pompier/start.php?c=galerie&t=galeriedata",
-              context: document.body
-                }).done(function(data) {
-                  var galerieData = JSON.parse(data);
-                  galerieData.forEach(function(galerie) {
-                    var nouvelElement = `
-                      <div class="carousel-item">
-                          <img src="data:image/png;base64,${galerie.photoLink}" class="img-galerie d-block w-100 img-fluid" style="object-fit: cover; height: 750px;" alt="...">
-                          <div class="carousel-caption d-none d-md-block">
-                              <h5>${galerie.titre}</h5>
-                              <p>${galerie.description}</p>
-                          </div>
-                      </div>`;
-                  $(".carousel-inner").append(nouvelElement);
-              });
-});
-
-
-        
-
-
-          
-        $(document).ready(function() {
-          $('.link-inter').magnificPopup({
-            removalDelay: 300,
-            mainClass: 'mfp-fade'
-          });
-        });
-
-        $(document).ready(function() {
-          $('.link-effectif').magnificPopup({
-            removalDelay: 300,
-            mainClass: 'mfp-fade'
-          });
-        });
-
-        $(document).ready(function() {
-          $('.link-inc').magnificPopup({
-            removalDelay: 300,
-            mainClass: 'mfp-fade'
-          });
-        });
 
           setTimeout(() => {
             const c = new countUp.CountUp("count-inter", 2300, { duration: 3 });
