@@ -21,7 +21,9 @@ $.ajax({
   context: document.body
 }).done(function(data) {
   var enginData = JSON.parse(data);
-  var delay = 200; // Initialisation du délai d'incrément
+  var screenWidth = window.innerWidth;
+  var delay = 200;
+  var delayIncrement = screenWidth < 992 ? 0 : 200; 
   enginData.forEach(function(engin) {
       var nouvelEngin = `
           <div data-aos="flip-left" data-aos-delay="${delay}" class="col-lg-3">
@@ -50,7 +52,46 @@ $.ajax({
           </div>
         </div>`;
       $(".row.gy-4.engin-container").append(nouvelEngin);
-      delay += 200;
+      delay += delayIncrement;
+  });
+});
+
+$.ajax({
+  url: "http://195.154.118.169/sofyan/pompier/start.php?c=stats&t=statsdata",
+  context: document.body
+}).done(function(data) {
+  var statsData = JSON.parse(data);
+  var screenWidth = window.innerWidth;
+  var delay = 200;
+  var delayIncrement = screenWidth < 992 ? 0 : 200; 
+  statsData.forEach(function(stats) {
+      var nouvelleStats = `
+        <div class="col-md-4" data-aos="fade-left" data-aos-delay="${delay}">
+          <div class="statistiques p-4 bg-base shadow-effect">
+            <div class="iconbox">
+              <i class="${stats.icon}"></i>
+            </div>
+            <h1 class="mt-4 mb-2">${stats.chiffre}</h1>
+            <h4>${stats.titre}</h4>
+            <p>${stats.short_desc}...</p>
+            <a  class="link-inter link-custom" data-bs-toggle="modal" data-bs-target="#${stats.titre}Modal" style="cursor: pointer;">En savoir plus</a>
+          </div>
+        </div>
+        <div class="modal fade" id="${stats.titre}Modal" tabindex="-1" aria-labelledby="${stats.titre}ModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-modal">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">${stats.titre}</h1>
+                <button type="button" class="btn-close text-brand" data-bs-dismiss="modal" aria-label="Close" ></button>
+              </div>
+              <div class="modal-body">
+                ${stats.long_desc}
+              </div>
+            </div>
+          </div>
+        </div>`;
+      $(".row.gy-4.stats-container").append(nouvelleStats);
+      delay += delayIncrement;
   });
 });
 
